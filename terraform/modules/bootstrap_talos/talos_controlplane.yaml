@@ -1,0 +1,11 @@
+version: v1alpha1
+machine:
+  install:
+    disk: "/dev/vda"
+  time:
+    disabled: false
+    servers:
+        - time.cloudflare.com
+        - time.google.com
+cluster:
+  allowSchedulingOnControlPlanes: true
