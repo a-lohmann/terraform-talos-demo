@@ -22,6 +22,8 @@ spec:
         value: "false"
       - name: "controller.service.type"
         value: "NodePort"
+      - name: "controller.hostNetwork"
+        value: "true"
       #- name: "nginx-ingress.controller.service.annotations.external-dns\\.alpha\\.kubernetes\\.io/hostname"
       #  value: mydomain.example.com
       #- name: "ingress.annotations.kubernetes\\.io/tls-acme"
