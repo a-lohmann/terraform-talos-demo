@@ -1,0 +1,3 @@
+configs:
+  secret:
+    argocdServerAdminPassword: "$2a$10$rurrlSSNOqMODBMmhKpVzOIrOs7b0SiMVHZG5QWcQffmJ/pLfaL.S"

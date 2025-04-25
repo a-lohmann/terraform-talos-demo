@@ -6,10 +6,10 @@ module "bootstrap_talos" {
   cluster_endpoint  = local.cluster_endpoint
 }
 
-#module "bootstrap_argocd" {
-#  source            = "../../modules/bootstrap_argocd"
-#  #depends_on        = [ module.bootstrap_talos.talos_cluster_health ]
-#}
+module "bootstrap_argocd" {
+  source            = "../../modules/bootstrap_argocd"
+  #depends_on        = [ module.bootstrap_talos.talos_cluster_health ]
+}
 
 #module "argocd_provision" {
 #  source            = "../../modules/argocd_provisioning"

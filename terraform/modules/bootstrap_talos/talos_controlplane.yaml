@@ -9,3 +9,8 @@ machine:
         - time.google.com
 cluster:
   allowSchedulingOnControlPlanes: true
+  network:
+    cni:
+      name: flannel
+  proxy:
+    disabled: false
