@@ -17,7 +17,7 @@ spec:
       ## Extra parameters to set (same as setting through values.yaml, but these take precedence)
       parameters:
       - name: "controller.hostPort.enabled"
-        value: true
+        value: "true"
       #- name: "nginx-ingress.controller.service.annotations.external-dns\\.alpha\\.kubernetes\\.io/hostname"
       #  value: mydomain.example.com
       #- name: "ingress.annotations.kubernetes\\.io/tls-acme"
