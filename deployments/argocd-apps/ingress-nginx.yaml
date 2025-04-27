@@ -7,7 +7,12 @@ spec:
   project: default
 
   source:
-    repoURL: https://kubernetes.github.io/ingress-nginx
+
+  sources:
+  - path: 'deployments/ingress-nginx'
+    repoURL: 'https://github.com/a-lohmann/terraform-talos-demo.git'
+    targetRevision: 'main'
+  - repoURL: https://kubernetes.github.io/ingress-nginx
     targetRevision: 4.12.1
 
     # helm specific config
@@ -42,11 +47,6 @@ spec:
 
       # Ignore locally missing valueFiles when installing Helm chart. Defaults to false
       ignoreMissingValueFiles: false
-
-  sources:
-  - path: 'deployments/ingress-nginx'
-    repoURL: 'https://github.com/a-lohmann/terraform-talos-demo.git'
-    targetRevision: 'main'
 
   destination:
     server: https://kubernetes.default.svc
