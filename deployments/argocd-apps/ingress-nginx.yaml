@@ -43,7 +43,10 @@ spec:
       # Ignore locally missing valueFiles when installing Helm chart. Defaults to false
       ignoreMissingValueFiles: false
 
-  sources: []
+  sources:
+  - path: 'deployments/ingress-nginx'
+    repoURL: 'https://github.com/a-lohmann/terraform-talos-demo.git'
+    targetRevision: 'main'
 
   destination:
     server: https://kubernetes.default.svc
