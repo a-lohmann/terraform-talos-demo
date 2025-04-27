@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: ingress-nginx
+  namespace: argocd
+spec:
+  project: default
+
+  sources:
+  - repoURL: https://kubernetes-sigs.github.io/metrics-server/
+    #targetRevision: 4.12.1
+
+    chart: metrics-server
+    helm:
+      ignoreMissingValueFiles: false
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: kube-system
+
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=false
+    automated:
+      selfHeal: true
+      prune: true
