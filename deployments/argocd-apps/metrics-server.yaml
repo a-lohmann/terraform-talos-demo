@@ -13,6 +13,9 @@ spec:
     chart: metrics-server
     helm:
       ignoreMissingValueFiles: false
+  - repoURL: git@github.com:alex1989hu/kubelet-serving-cert-approver.git
+    targetRevision: main
+    path: deploy/standalone-install.yaml
 
   destination:
     server: https://kubernetes.default.svc
