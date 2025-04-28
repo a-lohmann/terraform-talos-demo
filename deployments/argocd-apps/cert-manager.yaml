@@ -9,7 +9,6 @@ spec:
   sources:
   - repoURL: https://charts.jetstack.io
     targetRevision: "1.17.*"
-
     chart: cert-manager
     helm:
       parameters:
@@ -18,6 +17,9 @@ spec:
       - name: "crds.keep"
         value: "true"
       ignoreMissingValueFiles: false
+  - path: 'deployments/cert-manager'
+    repoURL: 'https://github.com/a-lohmann/terraform-talos-demo.git'
+    targetRevision: 'main'
 
   destination:
     server: https://kubernetes.default.svc
