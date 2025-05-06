@@ -15,7 +15,8 @@ spec:
       ignoreMissingValueFiles: false
   - repoURL: https://github.com/alex1989hu/kubelet-serving-cert-approver.git
     targetRevision: main
-    path: deploy/standalone-install.yaml
+    directory:
+      include: 'deploy/standalone-install.yaml'
 
   destination:
     server: https://kubernetes.default.svc
