@@ -13,7 +13,7 @@ spec:
     chart: metrics-server
     helm:
       ignoreMissingValueFiles: false
-  - repoURL: git@github.com:alex1989hu/kubelet-serving-cert-approver.git
+  - repoURL: https://github.com/alex1989hu/kubelet-serving-cert-approver.git
     targetRevision: main
     path: deploy/standalone-install.yaml
 
