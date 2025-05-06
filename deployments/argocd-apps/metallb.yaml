@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: metallb
+  namespace: argocd
+spec:
+  project: default
+
+  sources:
+  - repoURL: https://metallb.github.io/metallb
+    targetRevision: "*"
+
+    chart: metallb
+    helm:
+      ignoreMissingValueFiles: false
+  - path: 'deployments/metallb'
+    repoURL: 'https://github.com/a-lohmann/terraform-talos-demo.git'
+    targetRevision: 'main'
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: metallb
+
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=false
+    automated:
+      selfHeal: true
+      prune: true
