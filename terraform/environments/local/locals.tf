@@ -1,6 +1,6 @@
 locals {
   cluster_nodes = {
-    "talos-oss-cl8" = ["192.168.124.62", "192.168.124.117", "192.168.124.123"]
+    "talos-oss-cl9" = ["192.168.124.17", "192.168.124.116", "192.168.124.139"]
   }
   cluster_name = terraform.workspace
   nodes = "${local.cluster_nodes[local.cluster_name]}"
