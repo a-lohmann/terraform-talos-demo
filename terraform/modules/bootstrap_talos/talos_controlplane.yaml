@@ -11,7 +11,7 @@ machine:
           physical: true
       dhcp: true
       vip:
-        ip: 192.168.124.100
+        ip: 192.168.122.100
   nodeLabels:
     node.kubernetes.io/exclude-from-external-load-balancers:
       $patch: delete
@@ -22,6 +22,14 @@ machine:
         - time.google.com
 cluster:
   allowSchedulingOnControlPlanes: true
+  apiServer:
+    admissionControl:
+    - configuration:
+        exemptions:
+          namespaces:
+          - traefik
+          - kube-vip
+      name: PodSecurity
   extraManifests:
     - https://raw.githubusercontent.com/alex1989hu/kubelet-serving-cert-approver/main/deploy/standalone-install.yaml
   network:

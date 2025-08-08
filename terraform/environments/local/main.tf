@@ -10,12 +10,3 @@ module "bootstrap_argocd" {
   source            = "../../modules/bootstrap_argocd"
   #depends_on        = [ module.bootstrap_talos.talos_cluster_health ]
 }
-
-#module "argocd_provision" {
-#  source            = "../../modules/argocd_provisioning"
-##  #depends_on        = [ module.bootstrap_talos ]
-#}
-
-#module "nginx_ingress" {
-#  source            = "../../modules/nginx_ingress"
-#}
