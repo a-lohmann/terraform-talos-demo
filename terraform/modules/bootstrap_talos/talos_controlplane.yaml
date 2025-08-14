@@ -34,6 +34,6 @@ cluster:
     - https://raw.githubusercontent.com/alex1989hu/kubelet-serving-cert-approver/main/deploy/standalone-install.yaml
   network:
     cni:
-      name: flannel
+      name: none
   proxy:
-    disabled: false
+    disabled: true
