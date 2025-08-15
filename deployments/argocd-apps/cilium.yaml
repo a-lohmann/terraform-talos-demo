@@ -36,6 +36,8 @@ spec:
         value: "7445"
       - name: "operator.replicas"
         value: "1"
+      - name: "envoy.enabled"
+        value: "false"
       #- name: "nginx-ingress.controller.service.annotations.external-dns\\.alpha\\.kubernetes\\.io/hostname"
       #  value: mydomain.example.com
       #- name: "ingress.annotations.kubernetes\\.io/tls-acme"
