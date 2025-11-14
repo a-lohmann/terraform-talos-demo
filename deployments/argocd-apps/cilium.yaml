@@ -37,7 +37,7 @@ spec:
       - name: "operator.replicas"
         value: "1"
       - name: "envoy.enabled"
-        value: "false"
+        value: "true"
       - name: "ingressController.enabled"
         value: "true"
       - name: "ingressController.loadbalancerMode"
