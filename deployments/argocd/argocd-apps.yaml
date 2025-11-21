@@ -10,7 +10,7 @@ spec:
   source:
     path: 'deployments/argocd-apps'
     repoURL: 'https://github.com/a-lohmann/terraform-talos-demo.git'
-    targetRevision: 'main'
+    targetRevision: 'cilium'
   sources: []
   project: 'default'
   syncPolicy:
